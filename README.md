@@ -8,7 +8,7 @@ pip install wmi
 
 # Odpalamy skrypt
 
-python pywinlogs.py
+python mask_pywinlogs.py 
 
 
 
