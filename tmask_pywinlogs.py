@@ -112,27 +112,27 @@ def checkEventLogSystem():
 
 if __name__ == "__main__":
 
-    # try:
-    #     checkEventLogApplication()
-    # except OSError as e:
-    #     print("Error: " + e)
+    try:
+        checkEventLogApplication()
+    except OSError as e:
+        print("Error: " + e)
     try:
         checkEventLogSystem()
     except OSError as e:
         print("Error: " + e)
-    # try:
-    #     checkEventLogSecurity(4625)
-    # except OSError as e:
-    #     print("Error: " + e)
-    # try:
-    #     checkEventLogSecurity(4660)
-    # except OSError as e:
-    #     print("Error: " + e)
-    # try:
-    #     checkEventLogSecurity(4670)
-    # except OSError as e:
-    #     print("Error: " + e)
-    # try:
-    #     checkEventLogSecurity(4688)
-    # except OSError as e:
-    #     print("Error: " + e)
+    try:
+        checkEventLogSecurity(4625)
+    except OSError as e:
+        print("Error: " + e)
+    try:
+        checkEventLogSecurity(4660)
+    except OSError as e:
+        print("Error: " + e)
+    try:
+        checkEventLogSecurity(4670)
+    except OSError as e:
+        print("Error: " + e)
+    try:
+        checkEventLogSecurity(4688)
+    except OSError as e:
+        print("Error: " + e)
