@@ -12,6 +12,8 @@ python mask_pywinlogs.py
 
 
 
+# EventId które warto monitorować
+
 https://www.xplg.com/windows-server-security-events-list/
 
 4624	Successful account log on
