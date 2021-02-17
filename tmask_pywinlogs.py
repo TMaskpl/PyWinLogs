@@ -5,6 +5,7 @@ import os
 import os.path
 import codecs
 from shutil import move
+from multiprocessing import Process, current_process
 
 # c = wmi.WMI("MachineB", user=r"MachineB\fred", password="secret")
 
@@ -48,9 +49,7 @@ c = wmi.WMI()
 # 5157	Windows Filtering Platform blocked a connection
 # 5447	A Windows Filtering Platform filter was changed
 
-EventId = [4624	,
-           4625	,
-           4634	,
+EventId = [4625	,
            4648	,
            4660,
            4670,
@@ -193,6 +192,8 @@ def checkEventLogSystem():
 
 if __name__ == "__main__":
 
+    processes = []
+
     try:
         checkEventLogApplication()
     except OSError as e:
@@ -204,6 +205,9 @@ if __name__ == "__main__":
 
     for id in EventId:
         try:
-            checkEventLogSecurity(id)
+            process = Process(target = checkEventLogSecurity, args = (id,))
+            processes.append(process)
+            
+            process.start()
         except OSError as e:
             print("Error: " + e)
