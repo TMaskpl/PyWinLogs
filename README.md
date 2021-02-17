@@ -5,6 +5,7 @@ Python3 - Wondows Logs
 # Zainstaluj pod Windows Python 3, następnie
 
 pip install wmi
+
 pip install multiprocess
 
 
